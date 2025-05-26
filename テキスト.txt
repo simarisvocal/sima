@@ -1,0 +1,116 @@
+しまりす
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>しまりすボーカル教室 - 昭和レトロへようこそ！</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        body {
+            background-color: #00FFFF; /* シアンの背景 */
+            color: #FF0000; /* 赤いテキスト */
+            font-family: "MS PGothic", "Arial", sans-serif; /* ピクセルフォント風 */
+            text-align: center;
+        }
+        table {
+            border: 2px solid #0000FF; /* 青い枠 */
+            background-color: #FFFF00; /* 黄色のテーブル背景 */
+            margin: auto;
+            width: 80%;
+        }
+        td {
+            border: 1px solid #000000;
+            padding: 10px;
+            vertical-align: top;
+        }
+        .header {
+            background-color: #FF00FF; /* マゼンタのヘッダー */
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #00FF00; /* 緑のサイドバー */
+        }
+        .content {
+            width: 75%;
+            background-color: #FFFFFF;
+        }
+        .blink {
+            animation: blink 1s step-end infinite; /* <blink>再現 */
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        marquee {
+            font-size: 18px;
+            color: #FF0000;
+        }
+        .counter {
+            font-size: 16px;
+            color: #0000FF;
+            background-color: #FFFFFF;
+            border: 1px solid #000000;
+            padding: 5px;
+            display: inline-block;
+        }
+    </style>
+    <script type="text/javascript">
+        // 訪問者カウンター（簡易版）
+        function updateCounter() {
+            let count = localStorage.getItem('visitorCount') || 0;
+            count++;
+            localStorage.setItem('visitorCount', count);
+            document.getElementById('counter').innerText = '訪問者数: ' + count + ' 人';
+        }
+    </script>
+</head>
+<body onload="updateCounter()">
+    <!-- 8bitスペランカー風BGM -->
+    <audio autoplay loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+        ※ブラウザが音声をサポートしていません。
+    </audio>
+
+    <!-- ヘッダー -->
+    <table>
+        <tr>
+            <td colspan="2" class="header">
+                <span class="blink">しまりすボーカル教室へようこそ！</span>
+            </td>
+        </tr>
+        <tr>
+            <!-- サイドバー -->
+            <td class="sidebar">
+                <h3>メニュー</h3>
+                <p><a href="#home">ホーム</a></p>
+                <p><a href="https://x.com/spdkm" target="_blank">講師Twitter</a></p>
+            </td>
+            <!-- メインコンテンツ -->
+            <td class="content">
+                <h2>しまりすボーカル教室</h2>
+                <marquee>★2025年春の生徒募集中！歌で輝く人生を！★</marquee>
+                <p>ようこそ！しまりすボーカル教室は、初心者からプロ志向まで、楽しく歌を学ぶスクールです！</p>
+                
+                <h3 id="courses">コース案内</h3>
+                <p>使用スタジオ: サウンドスタジオノア渋谷2号店、サウンドスタジオノア中野店<br>※それ以外のスタジオも相談可能。</p>
+                <ul>
+                    <li><b>スタンダードコース</b>: 月3回レッスン、16,000円（スタジオ代込み）。</li>
+                    <li><b>ライトコース</b>: 月2回レッスン、12,000円（スタジオ代込み）。</li>
+                </ul>
+                
+                <h3 id="contact">お問い合わせ</h3>
+                <p>無料体験レッスン、レッスンのお申し込みは下記メールアドレスへ。</p>
+                <p>Email: <a href="mailto:simarisvocal@gmail.com">simarisvocal@gmail.com</a></p>
+                
+                <h3>訪問者カウンター</h3>
+                <div class="counter" id="counter">訪問者数: 0 人</div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- フッター -->
+    <p>© 2025 しまりすボーカル教室</p>
+</body>
+</html>
